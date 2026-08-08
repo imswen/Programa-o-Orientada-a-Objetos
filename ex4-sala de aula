@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class ex4
+{
+    public static void main(String[] args)
+    {
+        int alunos;
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Digite o número de alunos: ");
+        alunos = entrada.nextInt();
+
+        switch (alunos)
+        {
+            case 10:
+                System.out.println("A sala onde o curso será ministrado é a I-16.");
+                break;
+
+            case 20:
+                System.out.println("A sala onde o curso será ministrado é a I-16.");
+                break;
+
+            case 30:
+                System.out.println("A sala onde o curso será ministrado é a I-22.");
+                break;
+
+            default:
+                System.out.println("Não há informações sobre a sala onde será ministrado a aula.");
+                break;
+        }
+    }
+}
