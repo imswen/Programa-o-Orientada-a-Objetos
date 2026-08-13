@@ -1,0 +1,37 @@
+public class ex2
+{
+    public static class Zumbi
+    {
+        double vida;
+        String nome;
+    }
+
+    public static class TransfereVida
+    {
+        public void transfeir(Zumbi origem, Zumbi destino, double quantia)
+        {
+            origem.vida -= quantia;
+            destino.vida += quantia;
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        Zumbi zumbi1 = new Zumbi();
+
+        zumbi1.vida = 10;
+        zumbi1.nome = "Jackson";
+
+        Zumbi zumbi2 = new Zumbi();
+
+        zumbi2.vida = 10;
+        zumbi2.nome = "Jackson";
+
+
+        TransfereVida transferencia = new TransfereVida();
+        transferencia.transfeir(zumbi1,zumbi2, 3);
+
+        System.out.println(zumbi1.nome+ ": "+ zumbi1.vida);
+        System.out.println(zumbi2.nome+ ": "+ zumbi2.vida);
+    }
+}
