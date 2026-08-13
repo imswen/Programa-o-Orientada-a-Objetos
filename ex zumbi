@@ -1,0 +1,17 @@
+public class ex1
+{
+    public static class zumbi
+    {
+        void Grunir()
+        {
+            System.out.println("GRRRRR");
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        zumbi grunir = new zumbi();
+
+        grunir.Grunir();
+    }
+}
