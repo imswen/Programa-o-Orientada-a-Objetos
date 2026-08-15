@@ -1,37 +1,37 @@
-public class ex2
+public class Zumbi
 {
-    public static class Zumbi
+    double vida;
+    String nome;
+
+    void mostrarVida()
     {
-        double vida;
-        String nome;
+        System.out.println("Vida do "+nome+": "+vida);
     }
 
-    public static class TransfereVida
+    void transfereVida(Zumbi zumbiAlvo, double quantia)
     {
-        public void transfeir(Zumbi origem, Zumbi destino, double quantia)
-        {
-            origem.vida -= quantia;
-            destino.vida += quantia;
-        }
-    }
-
-    public static void main(String[] args)
-    {
-        Zumbi zumbi1 = new Zumbi();
-
-        zumbi1.vida = 10;
-        zumbi1.nome = "Jackson";
-
-        Zumbi zumbi2 = new Zumbi();
-
-        zumbi2.vida = 10;
-        zumbi2.nome = "Jackson";
-
-
-        TransfereVida transferencia = new TransfereVida();
-        transferencia.transfeir(zumbi1,zumbi2, 3);
-
-        System.out.println(zumbi1.nome+ ": "+ zumbi1.vida);
-        System.out.println(zumbi2.nome+ ": "+ zumbi2.vida);
+        vida -= quantia;
+        zumbiAlvo.vida += quantia;
     }
 }
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Zumbi zumbi = new Zumbi();
+        Zumbi zumbi1 = new Zumbi();
+
+        zumbi.nome = "Gui";
+        zumbi1.nome = "Leo";
+        
+        zumbi.vida = 20;
+        zumbi1.vida = 20;
+        
+        zumbi.transfereVida(zumbi1, 10);
+
+        zumbi.mostrarVida();
+        zumbi1.mostrarVida();
+    }
+}
+
