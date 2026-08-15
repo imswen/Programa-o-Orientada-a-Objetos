@@ -1,17 +1,28 @@
-public class ex1
+public class Zumbi
 {
-    public static class zumbi
-    {
-        void Grunir()
-        {
-            System.out.println("GRRRRR");
-        }
-    }
+    String nome;
+    int vida;
 
+    void Grunir()
+    {
+        System.out.println(nome+": GRRRRR");
+    }
+}
+
+public class Main
+{
     public static void main(String[] args)
     {
-        zumbi grunir = new zumbi();
+        Zumbi zumbi = new Zumbi();
+        Zumbi zumbi1 = new Zumbi();
 
-        grunir.Grunir();
+        zumbi.nome = "Gui";
+        zumbi1.nome = "Leo";
+
+        zumbi.vida = 20;
+        zumbi1.vida = 20;
+
+        zumbi.Grunir();
+        zumbi1.Grunir();
     }
 }
