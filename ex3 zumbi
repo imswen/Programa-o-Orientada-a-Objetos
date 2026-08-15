@@ -1,0 +1,38 @@
+public class Zumbi
+{
+    double vida;
+    String nome;
+
+    void mostrarVida()
+    {
+        System.out.println("Vida do "+nome+": "+vida);
+    }
+
+    void transfereVida(Zumbi zumbiAlvo, double quantia)
+    {
+        vida -= quantia;
+        zumbiAlvo.vida += quantia;
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Zumbi zumbi1 = new Zumbi();
+        Zumbi zumbi2 = new Zumbi();
+
+        zumbi1.nome = "Gui";
+        zumbi2.nome = "Leo";
+
+        zumbi1.vida = 10;
+        zumbi2. vida = 10;
+
+        zumbi1 = zumbi2;
+
+        zumbi1.transfereVida(zumbi2, 5);
+
+        zumbi1.mostrarVida();
+        zumbi2.mostrarVida();
+    }
+}
