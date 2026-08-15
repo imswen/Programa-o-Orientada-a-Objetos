@@ -1,0 +1,50 @@
+public class Zumbi
+{
+    double vida;
+    String nome;
+
+    void mostrarVida()
+    {
+        System.out.println("Vida do "+nome+": "+vida);
+    }
+
+    void transfereVida(Zumbi zumbiAlvo, double quantia)
+    {
+        if(vida < quantia)
+            System.out.println("Vida do zumbi insuficiente!");
+
+        else if (vida == quantia)
+        {
+            vida -= quantia;
+            zumbiAlvo.vida += quantia;
+            System.out.println("Vida transferida! O zumbi morreu");
+        }
+
+        else
+        {
+            vida -= quantia;
+            zumbiAlvo.vida += quantia;
+            System.out.println("Vida transferida!");
+        }
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Zumbi zumbi = new Zumbi();
+        Zumbi zumbi1 = new Zumbi();
+
+        zumbi.nome = "Gui";
+        zumbi1.nome = "Leo";
+
+        zumbi.vida = 4;
+        zumbi1.vida = 10;
+
+        zumbi.transfereVida(zumbi1, 5);
+
+        zumbi.mostrarVida();
+        zumbi1.mostrarVida();
+    }
+}
